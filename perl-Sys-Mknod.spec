@@ -1,5 +1,5 @@
 %define version	0.02
-%define release	%mkrel 7
+%define release	%mkrel 8
 %define name 	perl-%realname
 %define realname	Sys-Mknod
 
