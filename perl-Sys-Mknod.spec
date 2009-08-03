@@ -1,25 +1,24 @@
-%define version	0.02
-%define release	%mkrel 8
-%define name 	perl-%realname
-%define realname	Sys-Mknod
+%define upstream_name	Sys-Mknod
+%define upstream_version	0.02
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Sys::Mknod - make special files
-Name: 		%{name}
-Version: 	%{version}
-Release: 	%{release}
 License: 	GPL
 Group: 		Development/Perl
-Source: 	http://search.cpan.org/CPAN/authors/id/S/SA/SAMV/%{realname}-%{version}.tar.bz2
-URL: 		http://www.kernel.org/software/mon/
-BuildRequires:	perl-devel
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-root/
-BuildArch:      noarch
+Url: 		http://www.kernel.org/software/mon/
+Source0:	http://search.cpan.org/CPAN/authors/id/S/SA/SAMV/%{upstream_name}-%{upstream_version}.tar.bz2
+
+BuildArch:  noarch
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
    
 %description
 Sys::Mknod - make special files
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -36,13 +35,11 @@ make test
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
 %defattr(-,root,root)
 %{perl_vendorlib}
 %{_mandir}/*/*
 %doc Changes README
-
-%clean
-rm -rf $RPM_BUILD_ROOT
-
-
