@@ -8,7 +8,7 @@ Release:	5
 Summary:	Sys::Mknod - make special files
 License:	GPL
 Group:		Development/Perl
-Url:		http://www.kernel.org/software/mon/
+Url:		https://www.kernel.org/software/mon/
 Source0:	http://search.cpan.org/CPAN/authors/id/S/SA/SAMV/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
