@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		https://www.kernel.org/software/mon/
 Source0:	http://search.cpan.org/CPAN/authors/id/S/SA/SAMV/%{upstream_name}-%{upstream_version}.tar.bz2
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildArch:	noarch
    
