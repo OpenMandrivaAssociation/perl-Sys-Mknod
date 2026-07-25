@@ -2,14 +2,14 @@
 %define upstream_version	0.02
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	6
 
 Summary:	Sys::Mknod - make special files
 License:	GPL
 Group:		Development/Perl
 Url:		https://www.kernel.org/software/mon/
-Source0:	http://search.cpan.org/CPAN/authors/id/S/SA/SAMV/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	https://cpan.metacpan.org/authors/id/S/SA/SAMV/Sys-Mknod-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
