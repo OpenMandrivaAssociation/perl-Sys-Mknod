@@ -1,15 +1,13 @@
 %define upstream_name	Sys-Mknod
-%define upstream_version	0.02
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.02
+Release:	7
 
 Summary:	Sys::Mknod - make special files
 License:	GPL
 Group:		Development/Perl
 Url:		https://www.kernel.org/software/mon/
-Source0:	https://cpan.metacpan.org/authors/id/S/SA/SAMV/Sys-Mknod-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/S/SA/SAMV/Sys-Mknod-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -19,7 +17,7 @@ BuildArch:	noarch
 Sys::Mknod - make special files
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -48,9 +46,7 @@ make test
 
 * Mon Aug 03 2009 Jérôme Quelin <jquelin@mandriva.org> 0.20.0-1mdv2010.0
 + Revision: 408055
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.02-8mdv2009.0
+- rebuild using %0.02 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.02-8mdv2009.0
 + Revision: 258424
 - rebuild
 
